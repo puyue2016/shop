@@ -79,7 +79,6 @@
     <string name="title_buttom_tab">Buttom Tab</string>
 
 
-
     <string-array name="array_names">
         <item>"TANG CAN"</item>
         <item>"ZHONG YURAN"</item>
@@ -116,7 +115,6 @@
          <item>I am a student of Ehime University. I am working in team Mintia of enPiT at University of Tsukuba.
            Hope this application can make your trips more convenient. \n\nWE LOVE TRAVELING!</item>
     </string-array>
-
 
 
     <string name="duplicate">SHARE</string>

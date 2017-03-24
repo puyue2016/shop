@@ -20,7 +20,6 @@ public class HomeVideo extends Activity {
 
     @Override
     public void onCreate(Bundle icicle) {
-
         super.onCreate(icicle);
         //取消标题
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -49,7 +48,7 @@ public class HomeVideo extends Activity {
        mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
            @Override
            public void onCompletion(MediaPlayer mp) {
-               Intent in =new Intent(HomeVideo.this,MainActivity.class);
+               Intent in =new Intent(HomeVideo.this,LoginActivity.class);
                startActivity(in);
                finish();
            }
@@ -58,8 +57,9 @@ public class HomeVideo extends Activity {
     public void OnMySelfClick(View v)
     {
 
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);//open the page
-        startActivity(intent);
+        Intent in =new Intent(HomeVideo.this,LoginActivity.class);
+        startActivity(in);
+        finish();
 
     }
 

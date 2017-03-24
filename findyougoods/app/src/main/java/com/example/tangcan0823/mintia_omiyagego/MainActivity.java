@@ -64,23 +64,19 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
     private Toolbar mToolbar;
     private BackHandledFragment selectedFragment;
     private NavigationView mNavigationView;
-
     ImageView imageView;
     ImageButton imageButton;
     LinearLayout revealView, layoutButtons;
     Animation alphaAnimation;
     float pixelDensity;
     boolean flag = true;
-
     private static final int ANIM_DURATION_TOOLBAR = 300;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.app_name);
-
         //******************************************************:
 
         Kii.initialize(getApplicationContext(), "62efe455", "04bcacd4b05daa322166d9a272e0ec3c", Kii.Site.JP, true);
@@ -102,7 +98,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
             Toast.makeText(MainActivity.this, "This application needs Google Play services", Toast.LENGTH_LONG).show();
             return;
         }
-
         String username = "user1";
         String password = "123ABC";
         KiiUser.logIn(new KiiUserCallBack() {
@@ -119,7 +114,6 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
 
         //******************************************************
         setSupportActionBar(mToolbar);
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open,
                 R.string.drawer_close);
@@ -132,10 +126,7 @@ public class MainActivity extends AppCompatActivity implements BackHandledFragme
         setUpProfileImage();
 
         switchToMain();
-
-
     }
-
 
     public void goDetail(View view) {
         Intent intent;
